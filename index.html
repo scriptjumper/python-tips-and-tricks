@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tips & Tricks</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Python Tips & Tricks</h1>
+
+    <div>
+        <h2>1. Memory</h2>
+
+        <p>The method <strong>getsizeof</strong> can be used to retrieve the size of any object. Here's an example of the same.</p>
+
+        <pre>
+            <code>
+                import sys
+                number = 100
+
+                print(sys.getsizeof(number))
+                #output: 28
+            </code>
+        </pre>
+    </div>
+
+    <div>
+        <h2>2. Swapping</h2>
+
+        <p>The easiest wat to swop values without any third variable. This is how you can do it.</p>
+
+        <pre>
+            <code>
+                a, b = 10, 20
+                a, b = b, a
+
+                #output:
+                print(a) # 20
+                print(b) # 10
+            </code>
+        </pre>
+    </div>
+
+    <div>
+        <h2>3. Anagrams</h2>
+
+        <p>An anagram is a play on words created by rearranging the letters of the orignial word to make a new word or phrase.</p>
+
+        <p>we can sort the string values using the <strong>sorted</strong> method, which does not modify the orignial string.</p>
+
+        <p>Here's an example of the same.</p>
+
+        <pre>
+            <code>
+                def anagram(first, second):
+                    return sorted(first) == sorted(second)
+                
+                res = anagram('heart', 'earth')
+                print(res) #True
+            </code>
+        </pre>
+    </div>
+
+    <div>
+        <h2>4. Shuffle</h2>
+
+        <p>In order to shuffle the elements of a list, <strong>shuffle</strong> method from <strong>random</strong> module can be used.</p>
+
+        <p>Check out the implementation of the same.</p>
+
+        <pre>
+            <code>
+                from random import shuffle
+                my_list = [7, 23, 9, 35]
+                shuffle(my_list)
+
+                print(my_list) #[35, 7, 9, 23]
+            </code>
+        </pre>
+    </div>
+
+    <div>
+        <h2>5. Palindrome</h2>
+
+        <p>A palindrome is a word, number, phrase or other sequences of characters that reads the same backward as forward.</p>
+
+        <p>The code snippet will check for palindrome string.</p>
+
+        <pre>
+            <code>
+                def check_palindrome(value):
+                return value == value[::-1]
+
+                res = check_palindrome('level')
+                print(res) #True
+            </code>
+        </pre>
+    </div>
+
+    <div>
+        <h2>6. Running Time</h2>
+
+        <p>time module can be used to calculate the actual running time amongst other methods.</p>
+
+        <p>Here is the implementation of the same.</p>
+
+        <pre>
+            <code>
+                import time
+
+                start_time = time.time()
+
+                num1 = 12
+                num2 = 15
+                num3 = num1 * num2
+                print(num3) 
+            </code>
+        </pre>
+    </div>
+</body>
+</html>
